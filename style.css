@@ -37,6 +37,8 @@ body{
     margin-top: 50px;
 }
 #map-location{
+    height: 90%;
+    width: 100%;
     color: black;
     margin: 0;
     padding: 40px;
