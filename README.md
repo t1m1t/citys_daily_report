@@ -1,4 +1,4 @@
-# C4.17_hackathon 2
+# C5.17_hackathon 2
 
 Hackathon project involving the combination of different data sources into an application or game
 
@@ -7,7 +7,7 @@ Hackathon project involving the combination of different data sources into an ap
 - Must be documented loosely on JSDOC standards
 - Must be issue-managed via meistertask 
   - share the meistertask with daniel.paschal@learningfuze.com
-  - name your project 4.17 Team [your team number] Hackathon
+  - name your project 5.17 Team [your team number] Hackathon
 
 
 ### Judging Criteria
@@ -21,16 +21,27 @@ Hackathon project involving the combination of different data sources into an ap
 
 ### Teams
 - Team 1
-
-
+  - Kieran
+  - Sunoo
+  - Alphonse
+  - Kelsey
+  
 - Team 2
-
+  - Brian
+  - Insoo
+  - Dennis
+  - Howard
 
 - Team 3
-
+  - Elias
+  - Khanh
+  - Tim
+  - Adam
 
 - Team 4
-
+  - Jay
+  - Matt
+  - Jonathan
 
 ### Deadline: 
-- TBA Thursday, June 29, 2017
+- 7:00pm Thursday, June 29, 2017
