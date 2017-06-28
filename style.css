@@ -13,8 +13,7 @@ body{
     background-size: cover;
 }
 
-.head-title,
-.head-subtitle{
+.head-title{
     font-family: coolFont;
     font-size: 70px;
     color: white;
@@ -27,17 +26,6 @@ body{
             6px -6px black,
             -6px -6px black,
             6px 6px 9px black;
-}
-
-.head-subtitle{
-    font-size: 40px;
-    margin: 10px 0 20px;
-    text-shadow:
-            3px 3px black,
-            -3px 3px black,
-            3px -3px black,
-            -3px -3px black,
-            3px 3px 5px black;
 }
 
 #search_and_maps{
