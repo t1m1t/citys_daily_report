@@ -2,12 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Hack-A-Thon 2</title>
+    <title>Hack-A-Thon Main</title>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBVHYo1-ACgQdeMcJsl3obfU49O7UAHI">
+    </script>
     <script src="script.js"></script>
 </head>
 <body>
+
 <h2 class="head-title">_____Second Project</h2>
 <div id="main-section">
     <div id="map">
@@ -25,15 +29,14 @@
         </div>
 
         <div id="side_container2">
-            <p id="third-location">Information</p>
         </div>
     </div>
 
-    <div id="refresh-button">
-        <button class="refresh">Update</button>
+    <div class="buttons">
+        <button id="refresh-button">Refresh</button>
+        <button id="home-button">Home</button>
     </div>
 </div>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBVHYo1-ACgQdeMcJsl3obfU49O7UAHI&callback=initMap"></body>
-</script>
+
+</body>
 </html>

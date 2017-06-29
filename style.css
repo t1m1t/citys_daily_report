@@ -3,7 +3,12 @@
     src: url(fonts/BarleyScript.ttf);
 }
 
+@font-face {
+    font-family: dialogue;
+    src: url(fonts/dialogue.otf);
+}
 body{
+    font-family: dialogue;
     font-size: 0;
     width: 90%;
     height: auto;
@@ -12,14 +17,13 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 .head-title{
     font-family: BarleyScript;
     font-size: 90px;
     color: white;
     text-align: center;
     font-weight: bolder;
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     text-shadow:
             4px 4px 0 black,
             -1px -1px 0 black,
@@ -31,7 +35,7 @@ body{
 #map{
     display: inline-block;
     border: 2px solid white;
-    height: 400px;
+    height: 550px;
     width: 75%;
     position: relative;
     border-radius: 15px;
@@ -48,72 +52,91 @@ body{
 .side-container{
     display: inline-block;
     position: absolute;
-    width: 230px;
+    width: 300px;
 }
 
 #side_container1,
 #side_container2{
-    margin: 17px 20px 20px;
+    margin: 15px 20px 20px;
     border: 2px solid white;
     display: block;
     width: 100%;
-    height: 214px;
+    height: 325px;
     border-radius: 10px;
 }
 
 #side_container1{
-    height: 160px;
+    height: 200px;
 }
 
 #side_container2{
     margin: 20px 20px 0;
 }
 
-#refresh-button{
+.buttons{
     margin-top: 20px;
 }
 
-.refresh{
+#refresh-button,
+#home-button{
     font-family: BarleyScript;
     width: 100px;
     height: 40px;
+    margin-right: 20px;
     border-radius: 10px;
     font-size: 20px;
     color: white;
-    background-color: white;
+    background-color: transparent;
     display: inline;
+    border: 2px solid white;
     text-shadow:
-            2px 2px 0 black,
+            4px 4px 0 black,
             -1px -1px 0 black,
             1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 5px black;
+            -2px 2px 0 black,
+            2px 2px 5px black;
 }
 
+
 #weather-location{
-    margin: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
 }
 #weather_image{
-    border: 2px solid white;
+    /*border: 2px solid white;*/
+    background-repeat: no-repeat;
+    background-size: cover;
     float: right;
-    width: 80px;
-    height: 80px;
-    margin: 5px 20px;
+    width: 120px;
+    height: 120px;
+    margin: 0 10px;
 }
 
 #locationDiv,
 #weather,
 #estimated{
-    margin: 3px 10px;
-    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    margin: 8px 15px 0;
+    /*border: 2px solid white;*/
     display: block;
-    width: 80px;
-    height: 23px;
+    width: 145px;
+    height: 30px;
+}
+
+#locationDiv{
+    margin-top: 20px;
 }
 
 #observation_time{
-    margin: 5px 10px;
-    border: 2px solid white;
-    width: 200px;
-    height: 23px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin: 10px 10px 0;
+    /*border: 2px solid white;*/
+    width: 275px;
+    height: 30px;
 }
