@@ -28,7 +28,7 @@ body{
             1px 1px 20px black;
 }
 
-#search_and_maps{
+#map-location{
     display: inline-block;
     border: 2px solid white;
     height: 400px;

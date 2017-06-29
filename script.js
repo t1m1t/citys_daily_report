@@ -4,8 +4,6 @@ $(document).ready(function () {
     // navigatorFunction();
 });
 
-var map, infoWindow;
-
 function createMap() {
     // Creates and centers map
     var location = {lat: -25.363, lng: 131.044};
@@ -48,6 +46,7 @@ function geocodeAddress(geocoder, address, resultsMap) {
 }
 
 google.maps.event.addDomListener(window, "load", initMap);
+
 // var x = {};
 // var navigatorFunction = function() {
 //     if(navigator.geolocation) {
