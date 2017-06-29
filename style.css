@@ -1,16 +1,17 @@
 @font-face {
-    font-family: coolFont;
-    src: url(fonts/coolFont.ttf);
+    font-family: BarleyScript;
+    src: url(fonts/BarleyScript.ttf);
 }
 body{
     font-size: 0;
-    width: 1400px;
-    height: 1000px;
+    width: 90%;
+    height: auto;
     margin: 0 auto;
     background-image: url("images/blurry-city.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+<<<<<<< HEAD
 .head-title,
 .head-subtitle{
     font-family: coolFont;
@@ -20,13 +21,24 @@ body{
     font-weight: bolder;
 
     margin: 20px 0 0;
+=======
+
+.head-title{
+    font-family: BarleyScript;
+    font-size: 90px;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    margin: 5px 0 0;
+>>>>>>> 4c7758a27a91c1e685ac7adda32c949801676a04
     text-shadow:
-            6px 6px black,
-            -6px 6px black,
-            6px -6px black,
-            -6px -6px black,
-            6px 6px 9px black;
+            4px 4px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 20px black;
 }
+<<<<<<< HEAD
 .head-subtitle{
     font-size: 40px;
     margin: 10px 0 20px;
@@ -39,39 +51,97 @@ body{
 }
 
 #search_and_maps{
+=======
+
+#map-location{
+>>>>>>> 4c7758a27a91c1e685ac7adda32c949801676a04
     display: inline-block;
     border: 2px solid white;
-    height: 950px;
-    width: 950px;
+    height: 400px;
+    width: 75%;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+#weather-location {
+    color: white;
+    margin: 0;
+    padding: 5px;
+    font-size: 15px;
 }
 
 .side-container{
     display: inline-block;
-    top: 20px;
+    position: absolute;
+    width: 230px;
 }
 
 #side_container1,
-#side_container2 {
-    margin: 20px;
+#side_container2{
+    margin: 17px 20px 20px;
     border: 2px solid white;
     display: block;
-    width: 400px;
-    height: 460px;
+    width: 100%;
+    height: 214px;
     border-radius: 10px;
+}
+
+#side_container1{
+    height: 160px;
+}
+
+#side_container2{
+    margin: 20px 20px 0;
 }
 
 #refresh-button{
     margin-top: 20px;
 }
 .refresh{
-    font-family: coolFont;
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
-    font-size: 30px;
+    font-family: BarleyScript;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
     color: white;
-    background-color: black;
+    background-color: white;
     display: inline;
+    text-shadow:
+            2px 2px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 5px black;
 }
+
+#weather-location{
+    margin: 0;
+}
+#weather_image{
+    border: 2px solid white;
+    float: right;
+    width: 80px;
+    height: 80px;
+    margin: 5px 20px;
+}
+<<<<<<< HEAD
+=======
+
+#locationDiv,
+#weather,
+#estimated{
+    margin: 3px 10px;
+    border: 2px solid white;
+    display: block;
+    width: 80px;
+    height: 23px;
+}
+
+#observation_time{
+    margin: 5px 10px;
+    border: 2px solid white;
+    width: 200px;
+    height: 23px;
+}
+>>>>>>> 4c7758a27a91c1e685ac7adda32c949801676a04

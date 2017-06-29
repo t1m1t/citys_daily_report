@@ -1,14 +1,8 @@
-/**
-<<<<<<< HEAD
- * Created by Adam on 6/28/17.
- */
 $(document).ready(function () {
     // $("#start_over").click(start_over);
     createMap();
     // navigatorFunction();
 });
-
-
 function createMap() {
     // Creates and centers map
     var location = {lat: -25.363, lng: 131.044};
@@ -16,7 +10,6 @@ function createMap() {
         zoom: 4,
         center: location
     });
-
 
     // Places marker at location
     var marker = new google.maps.Marker({
@@ -33,6 +26,10 @@ function createMap() {
         geocodeAddress(geocoder, addresses[x], map);
     }
 
+    var addresses = ['Dallas', 'Chicago', 'Jonesboro','Las Vegas','Austin','Memphis', 'Los Angeles'];
+    for (var x = 0; x < addresses.length; x++) {
+        geocodeAddress(geocoder, addresses[x], map);
+    }
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
@@ -54,10 +51,8 @@ function geocodeAddress(geocoder, address, resultsMap) {
         }
     });
 }
+
 google.maps.event.addDomListener(window, "load", initMap);
-
-
-
 
 // var x = {};
 // var navigatorFunction = function() {
@@ -71,5 +66,4 @@ google.maps.event.addDomListener(window, "load", initMap);
 //         console.error("navigator.geolocation does not exist.");
 //         return false;
 //     }
-// };
 
