@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // // $("#start_over").click(start_over);
+    // $("#start_over").click(start_over);
     // createMap();
     // // navigatorFunction();
     $.ajax(displayWeather);
@@ -61,7 +61,6 @@ $(document).ready(function () {
 // //         return false;
 // //     }
 // // };
-
 
 var long = 33.740000;
 var lat = -117.730000;
