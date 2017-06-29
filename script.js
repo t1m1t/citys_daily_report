@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * Created by Adam on 6/28/17.
  */
 $(document).ready(function () {
@@ -7,7 +8,6 @@ $(document).ready(function () {
     // navigatorFunction();
 });
 
-var map, infoWindow;
 
 function createMap() {
     // Creates and centers map
@@ -72,3 +72,4 @@ google.maps.event.addDomListener(window, "load", initMap);
 //         return false;
 //     }
 // };
+
