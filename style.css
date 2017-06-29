@@ -4,12 +4,12 @@
 }
 
 @font-face {
-    font-family: Arvin_Regular;
-    src: url(fonts/Arvin_Regular.ttf);
+    font-family: madness;
+    src: url(fonts/madness.otf);
 }
 
 body{
-    font-family: Arvin_Regular;
+    font-family: madness;
     font-size: 0;
     width: 90%;
     height: auto;
