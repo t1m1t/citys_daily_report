@@ -1,42 +1,26 @@
 $(document).ready(function () {
     // $("#start_over").click(start_over);
-    createMap();
-    // navigatorFunction();
+    initialize();
 });
-
-function createMap() {
-    // Creates and centers map
-    var location = {lat: -25.363, lng: 131.044};
-    var map = new google.maps.Map(document.getElementById('map-location'), {
-        zoom: 4,
-        center: location
-    });
-
-    // Places marker at location
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
-
-    // Maps Geocoder
-    var geocoder = new google.maps.Geocoder();
-    var addresses = ['Dallas', 'Chicago', 'Jonesboro','Las Vegas','Austin','Memphis', 'Los Angeles'];
-    for (var x = 0; x < addresses.length; x++) {
-        geocodeAddress(geocoder, addresses[x], map);
-    }
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            map.setCenter(initialLocation);
-        });
-    }
+var geocoder;
+var map;
+function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(33.6846,-117.8265);
+    var mapOptions = {
+        zoom: 8,
+        center: latlng
+    };
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
 
-function geocodeAddress(geocoder, address, resultsMap) {
-    geocoder.geocode({'address': address}, function(results, status) {
-        if (status === 'OK') {
+function codeAddress() {
+    var address = document.getElementById('address').value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == 'OK') {
+            map.setCenter(results[0].geometry.location);
             var marker = new google.maps.Marker({
-                map: resultsMap,
+                map: map,
                 position: results[0].geometry.location
             });
         } else {
@@ -44,8 +28,18 @@ function geocodeAddress(geocoder, address, resultsMap) {
         }
     });
 }
-
-google.maps.event.addDomListener(window, "load", initMap);
+// var map;
+// function createMap() {
+//     // Creates and centers map
+//     var location = {lat: -25.363, lng: 131.044};
+//     map = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 4,
+//         center: location
+//     });
+//
+// }
+//
+// google.maps.event.addDomListener(window, "load", initMap);
 
 // var x = {};
 // var navigatorFunction = function() {
