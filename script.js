@@ -1,12 +1,23 @@
+var lat1 = 33.6846;
+var lng = -117.8265;
+var data = null;
 $(document).ready(function () {
     // $("#start_over").click(start_over);
     initialize();
-    $.ajax(displayWeather);
     $.ajax(chuckNorris);
+    $.ajax(displayWeather);
     // $('#address').click(zoomToArea);
     $('.btn-danger').click(codeAddress);
-});
 
+    $("#address_button").click(function(){
+        console.log("clicked");
+        codeAddress();
+    });
+    $("#weather_button").click(function() {
+        console.log("weather button clicked");
+        $.ajax(displayWeather);
+    });
+});
 var geocoder;
 var map;
 
@@ -29,6 +40,11 @@ function codeAddress() {
                 map: map,
                 position: results[0].geometry.location
             });
+            console.log(results[0].geometry.location.lat());
+            console.log(results[0].geometry.location.lng());
+            lat1 = results[0].geometry.location.lat();
+            lng = results[0].geometry.location.lng();
+
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -36,11 +52,8 @@ function codeAddress() {
 }
 
 
-var long = 33.740000;
-var lat = -117.730000;
-
 var displayWeather ={
-    url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+long+','+lat+'.json ',
+    url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+lng+','+lat1+'.json ',
     success: receiveDataFromServer,
     error: errorFromServer,
     dataType: 'json',
@@ -52,7 +65,7 @@ function errorFromServer(){
 }
 
 function receiveDataFromServer(data){
-    console.log('function was called');
+    console.log('display weather function was called');
     console.log(data);
     console.log(data.current_observation.display_location.full);
     console.log(data.current_observation.icon_url);
