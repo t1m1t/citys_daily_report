@@ -3,6 +3,9 @@ $(document).ready(function () {
     initialize();
     $.ajax(displayWeather);
     $.ajax(chuckNorris);
+    // $('#address').click(zoomToArea);
+
+
 });
 var geocoder;
 var map;
@@ -15,6 +18,8 @@ function initialize() {
     };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
+
+function zoomToArea()
 
 function codeAddress() {
     var address = document.getElementById('address').value;
@@ -58,10 +63,37 @@ function codeAddress() {
 // };
 
 
+var geocoder;
+var map;
+
+function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(33.6846,-117.8265);
+    var mapOptions = {
+        zoom: 8,
+        center: latlng
+    };
+    map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+function codeAddress() {
+    var address = document.getElementById('address').value;
+    geocoder.geocode( {'address': address}, function(results, status) {
+        if (status == 'OK') {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+            });
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+}
+
 
 var long = 33.740000;
 var lat = -117.730000;
-
 
 var displayWeather ={
     url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+long+','+lat+'.json ',
@@ -94,7 +126,6 @@ var chuckNorris ={
     dataType: 'json',
     crossDomain: true,
     method: 'get'
-
 };
 
 function chuckError(){
@@ -106,7 +137,6 @@ function receiveChuckData(chuck){
     console.log(chuck);
     console.log(chuck.value);
     $('#displayDiv').text(chuck.value);
-
 }
 
 var displayGooglePlaces ={
@@ -116,3 +146,4 @@ var displayGooglePlaces ={
     dataType: 'json',
     method: 'get'
 };
+

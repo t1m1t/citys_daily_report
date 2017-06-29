@@ -73,25 +73,30 @@ body{
     margin: 20px 20px 0;
 }
 
-#refresh-button{
+.buttons{
     margin-top: 20px;
 }
-.refresh{
+
+#refresh-button,
+#home-button{
     font-family: BarleyScript;
     width: 100px;
     height: 40px;
+    margin-right: 20px;
     border-radius: 10px;
     font-size: 20px;
     color: white;
-    background-color: white;
+    background-color: transparent;
     display: inline;
+    border: 2px solid white;
     text-shadow:
-            2px 2px 0 black,
+            4px 4px 0 black,
             -1px -1px 0 black,
             1px -1px 0 black,
-            -1px 1px 0 black,
-            1px 1px 5px black;
+            -2px 2px 0 black,
+            2px 2px 5px black;
 }
+
 
 #weather-location{
     font-size: 20px;
