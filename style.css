@@ -31,7 +31,7 @@ body{
 #map-location{
     display: inline-block;
     border: 2px solid white;
-    height: 550px;
+    height: 400px;
     width: 75%;
     position: relative;
     border-radius: 15px;
@@ -48,21 +48,21 @@ body{
 .side-container{
     display: inline-block;
     position: absolute;
-    width: 300px;
+    width: 230px;
 }
 
 #side_container1,
 #side_container2{
-    margin: 15px 20px 20px;
+    margin: 17px 20px 20px;
     border: 2px solid white;
     display: block;
     width: 100%;
-    height: 325px;
+    height: 214px;
     border-radius: 10px;
 }
 
 #side_container1{
-    height: 200px;
+    height: 160px;
 }
 
 #side_container2{
@@ -91,42 +91,29 @@ body{
 }
 
 #weather-location{
-    font-size: 18px;
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 10px;
+    margin: 0;
 }
 #weather_image{
-    /*border: 2px solid white;*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    border: 2px solid white;
     float: right;
-    width: 111px;
-    height: 111px;
-    margin: 7px 10px;
+    width: 80px;
+    height: 80px;
+    margin: 5px 20px;
 }
 
 #locationDiv,
 #weather,
 #estimated{
-    color: white;
-    font-size: 20px;
-    margin: 8px 10px 0;
-    /*border: 2px solid white;*/
+    margin: 3px 10px;
+    border: 2px solid white;
     display: block;
-    width: 145px;
-    height: 30px;
-}
-#locationDiv{
-    margin-top: 27px;
+    width: 80px;
+    height: 23px;
 }
 
 #observation_time{
-    text-align: center;
-    color: white;
-    font-size: 12px;
-    margin: 10px 10px 0;
-    /*border: 2px solid white;*/
-    width: 275px;
-    height: 30px;
+    margin: 5px 10px;
+    border: 2px solid white;
+    width: 200px;
+    height: 23px;
 }
