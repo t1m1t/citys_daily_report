@@ -2,15 +2,11 @@
     font-family: BarleyScript;
     src: url(fonts/BarleyScript.ttf);
 }
-<<<<<<< HEAD
-=======
 
 @font-face {
     font-family: dialogue;
     src: url(fonts/dialogue.otf);
 }
-
->>>>>>> 51ee14a36b481e8c319d396daa2bd688d9ab5840
 body{
     font-family: dialogue;
     font-size: 0;
@@ -132,13 +128,6 @@ body{
 }
 
 #observation_time{
-<<<<<<< HEAD
-    margin: 5px 10px;
-    border: 2px solid white;
-    width: 200px;
-    height: 23px;
-}
-=======
     text-align: center;
     color: white;
     font-size: 12px;
@@ -147,4 +136,3 @@ body{
     width: 275px;
     height: 30px;
 }
->>>>>>> 51ee14a36b481e8c319d396daa2bd688d9ab5840
