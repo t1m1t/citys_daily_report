@@ -14,9 +14,9 @@
 <div id="main-section">
     <form class="form-inline text-center">
         <div class="input-group">
-            <input type="text" class="form-control input-lg" size="40" placeholder="City or Zipcode" required>
+            <input type="text" id="address" class="form-control input-lg" size="40" placeholder="City or Zipcode" required>
             <div class="input-group-btn">
-                <<a href="index.html" type="button" class="btn btn-lg btn-danger">Enter</a>
+                <a href="index.html" value="encode" onclick="codeAddress()" type="button" class="btn btn-lg btn-danger">Enter</a>
             </div>
         </div>
         <div id="displayDiv"></div>

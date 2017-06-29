@@ -10,8 +10,8 @@
 <body>
 <h2 class="head-title">_____Second Project</h2>
 <div id="main-section">
-    <div id="map-location">
-       
+    <div id="map">
+
     </div>
 
     <div class="side-container">
@@ -25,13 +25,16 @@
         </div>
 
         <div id="side_container2">
-            <p id="third-location">Information</p>
         </div>
     </div>
 
-    <div id="refresh-button">
-        <button class="refresh">Refresh</button>
+    <div class="buttons">
+        <button id="refresh-button">Refresh</button>
+        <button id="home-button">Home</button>
     </div>
 </div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBVHYo1-ACgQdeMcJsl3obfU49O7UAHI&callback=initMap">
+</script>
 </body>
 </html>
