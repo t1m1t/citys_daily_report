@@ -28,29 +28,3 @@ function codeAddress() {
         }
     });
 }
-// var map;
-// function createMap() {
-//     // Creates and centers map
-//     var location = {lat: -25.363, lng: 131.044};
-//     map = new google.maps.Map(document.getElementById('map'), {
-//         zoom: 4,
-//         center: location
-//     });
-//
-// }
-//
-// google.maps.event.addDomListener(window, "load", initMap);
-
-// var x = {};
-// var navigatorFunction = function() {
-//     if(navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(function(position) {
-//             x.latitude = position.coords.latitude;
-//             x.longitude = position.coords.longitude;
-//             console.log(x);
-//         });
-//     } else {
-//         console.error("navigator.geolocation does not exist.");
-//         return false;
-//     }
-// };
