@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <title>Hack-A-Thon Main</title>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBVHYo1-ACgQdeMcJsl3obfU49O7UAHI">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBVHYo1-ACgQdeMcJsl3obfU49O7UAHI"></script>
     <script src="script.js"></script>
 </head>
 <body>
 
 <h2 class="head-title">_____Second Project</h2>
+<div id="displayDiv"></div>
 <div id="main-section">
-    <div id="floating-panel">
-        <input id="address" type="textbox" value="Irvine, Ca">
-        <input type="button" value="Address" onclick="codeAddress()">
-    </div>
+    <!--<div id="floating-panel">-->
+        <!--<input id="address" type="textbox" value="Irvine, Ca">-->
+        <!--<input type="button" value="Address" onclick="codeAddress()">-->
+    <!--</div>-->
     <div id="map">
     </div>
 
@@ -30,15 +31,19 @@
             <div id="estimated"></div>
             <div id="observation_time"></div>
         </div>
-
         <div id="side_container2">
         </div>
     </div>
-
-    <div class="buttons">
-        <button id="refresh-button">Refresh</button>
-        <button id="home-button">Home</button>
-    </div>
+    <form class="form-inline text-center">
+        <div class="input-group">
+            <input type="text" id="address" class="form-control input-md" size="40" placeholder="City or Zipcode">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-md btn-danger" onclick="codeAddress()" >Enter</button>
+            </div>
+        </div>
+    </form>
+    <!--<button id="refresh-button">Refresh</button>-->
+    <!--<button id="home-button">Home</button>-->
 </div>
 
 </body>
