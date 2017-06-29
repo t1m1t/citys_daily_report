@@ -19,8 +19,6 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
 
-// function zoomToArea()
-
 function codeAddress() {
     var address = document.getElementById('address').value;
     geocoder.geocode( { 'address': address}, function(results, status) {

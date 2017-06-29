@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style2.css">
     <script src="script.js"></script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBVHYo1-ACgQdeMcJsl3obfU49O7UAHI">
+    </script>
 </head>
 <body>
 <h2 class="head-title">_____Second Project</h2>
 <div id="main-section">
     <form class="form-inline text-center">
         <div class="input-group">
-            <input type="text" id="address" class="form-control input-lg" size="40" placeholder="City or Zipcode" required>
+            <input type="text" id="address" class="form-control input-lg" size="40" placeholder="City or Zipcode">
             <div class="input-group-btn">
-                <a href="index.html" value="encode" onclick="codeAddress()" type="button" class="btn btn-lg btn-danger">Enter</a>
+                <a href="index.html" onclick="codeAddress()" type="button" class="btn btn-lg btn-danger">Enter</a>
             </div>
         </div>
         <div id="displayDiv"></div>
