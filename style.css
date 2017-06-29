@@ -2,7 +2,17 @@
     font-family: BarleyScript;
     src: url(fonts/BarleyScript.ttf);
 }
+<<<<<<< HEAD
+=======
+
+@font-face {
+    font-family: dialogue;
+    src: url(fonts/dialogue.otf);
+}
+
+>>>>>>> 51ee14a36b481e8c319d396daa2bd688d9ab5840
 body{
+    font-family: dialogue;
     font-size: 0;
     width: 90%;
     height: auto;
@@ -17,7 +27,7 @@ body{
     color: white;
     text-align: center;
     font-weight: bolder;
-    margin: 5px 0 0;
+    margin: 10px 0 0;
     text-shadow:
             4px 4px 0 black,
             -1px -1px 0 black,
@@ -30,7 +40,7 @@ body{
 #map-location{
     display: inline-block;
     border: 2px solid white;
-    height: 400px;
+    height: 550px;
     width: 75%;
     position: relative;
     border-radius: 15px;
@@ -47,21 +57,21 @@ body{
 .side-container{
     display: inline-block;
     position: absolute;
-    width: 230px;
+    width: 300px;
 }
 
 #side_container1,
 #side_container2{
-    margin: 17px 20px 20px;
+    margin: 15px 20px 20px;
     border: 2px solid white;
     display: block;
     width: 100%;
-    height: 214px;
+    height: 325px;
     border-radius: 10px;
 }
 
 #side_container1{
-    height: 160px;
+    height: 200px;
 }
 
 #side_container2{
@@ -89,29 +99,52 @@ body{
 }
 
 #weather-location{
-    margin: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
 }
 #weather_image{
-    border: 2px solid white;
+    /*border: 2px solid white;*/
+    background-repeat: no-repeat;
+    background-size: cover;
     float: right;
-    width: 80px;
-    height: 80px;
-    margin: 5px 20px;
+    width: 120px;
+    height: 120px;
+    margin: 0 10px;
 }
 
 #locationDiv,
 #weather,
 #estimated{
-    margin: 3px 10px;
-    border: 2px solid white;
+    color: white;
+    font-size: 20px;
+    margin: 8px 15px 0;
+    /*border: 2px solid white;*/
     display: block;
-    width: 80px;
-    height: 23px;
+    width: 145px;
+    height: 30px;
+}
+
+#locationDiv{
+    margin-top: 20px;
 }
 
 #observation_time{
+<<<<<<< HEAD
     margin: 5px 10px;
     border: 2px solid white;
     width: 200px;
     height: 23px;
 }
+=======
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin: 10px 10px 0;
+    /*border: 2px solid white;*/
+    width: 275px;
+    height: 30px;
+}
+>>>>>>> 51ee14a36b481e8c319d396daa2bd688d9ab5840
