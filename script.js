@@ -3,6 +3,7 @@ $(document).ready(function () {
     // createMap();
     // // navigatorFunction();
     $.ajax(displayWeather);
+    $.ajax(chuckNorris);
 });
 
 // function createMap() {
@@ -72,7 +73,6 @@ var displayWeather ={
     error: errorFromServer,
     dataType: 'json',
     method: 'get'
-
 };
 
 function errorFromServer(){
@@ -89,5 +89,26 @@ function receiveDataFromServer(data){
     $('#weather').text(data.current_observation.weather);
     $('#estimated').text(data.current_observation.temperature_string);
     $('#observation_time').text(data.current_observation.observation_time);
+}
+
+var chuckNorris ={
+    url: 'https://api.chucknorris.io/jokes/random',
+    success: receiveChuckData,
+    error: chuckError,
+    dataType: 'json',
+    crossDomain: true,
+    method: 'get'
+
+};
+
+function chuckError(){
+    console.log('there was an error');
+}
+
+function receiveChuckData(chuck){
+    console.log('function was called');
+    console.log(chuck);
+    console.log(chuck.value);
+    $('#displayDiv').text(chuck.value);
 
 }
