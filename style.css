@@ -203,4 +203,5 @@ body{
     height: 80px;
     width: auto;
     margin: -40px 0 0 125px;
+    display: inline-block;
 }
