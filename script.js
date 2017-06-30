@@ -5,6 +5,15 @@ $(document).ready(function () {
     // $("#start_over").click(start_over);
     initialize();
     $.ajax(chuckNorris);
+
+    var displayWeather ={
+        url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+lat1+','+lng+'.json ',
+        success: receiveDataFromServer,
+        error: errorFromServer,
+        dataType: 'json',
+        method: 'get'
+    };
+
     $.ajax(displayWeather);
     // $('#address').click(zoomToArea);
     $('.btn-danger').click(codeAddress);
@@ -13,9 +22,9 @@ $(document).ready(function () {
         console.log("clicked");
         codeAddress();
     });
-    $("#weather_button").click(function() {
+    $("#weather_button").click(function(){
         console.log("weather button clicked");
-        $.ajax(displayWeather);
+
     });
 });
 var geocoder;
@@ -45,20 +54,21 @@ function codeAddress() {
             lat1 = results[0].geometry.location.lat();
             lng = results[0].geometry.location.lng();
 
+            var displayWeather ={
+                url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+lat1+','+lng+'.json ',
+                success: receiveDataFromServer,
+                error: errorFromServer,
+                dataType: 'json',
+                method: 'get'
+            };
+
+            $.ajax(displayWeather);
+
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
     });
 }
-
-
-var displayWeather ={
-    url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+lng+','+lat1+'.json ',
-    success: receiveDataFromServer,
-    error: errorFromServer,
-    dataType: 'json',
-    method: 'get'
-};
 
 function errorFromServer(){
     console.log('there was an error');
@@ -71,6 +81,7 @@ function receiveDataFromServer(data){
     console.log(data.current_observation.icon_url);
     $('#weather_image').css('background-image','url('+data.current_observation.icon_url+')');
     $('#locationDiv').text(data.current_observation.display_location.full);
+    $('#city_location').text(data.current_observation.observation_location.city);
     $('#weather').text(data.current_observation.weather);
     $('#estimated').text(data.current_observation.temperature_string);
     $('#observation_time').text(data.current_observation.observation_time);
