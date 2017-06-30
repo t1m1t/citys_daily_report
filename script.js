@@ -1,6 +1,7 @@
 var lat1 = 33.6846;
 var lng = -117.8265;
 var data = null;
+
 $(document).ready(function () {
     // $("#start_over").click(start_over);
     initialize();
@@ -19,14 +20,13 @@ $(document).ready(function () {
     $('.btn-danger').click(codeAddress);
 
     $("#address_button").click(function(){
+        $.ajax(chuckNorris);
         console.log("clicked");
         codeAddress();
     });
-    $("#weather_button").click(function(){
-        console.log("weather button clicked");
 
-    });
 });
+
 var geocoder;
 var map;
 
@@ -38,6 +38,9 @@ function initialize() {
         center: latlng
     };
     map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
 }
 
 function codeAddress() {
@@ -106,4 +109,3 @@ function receiveChuckData(chuck){
     console.log(chuck.value);
     $('#displayDiv').text(chuck.value);
 }
-

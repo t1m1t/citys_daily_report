@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<h2 class="head-title">_____Chuck Norris</h2>
+<h2 class="head-title">__Chuck's Daily Report!</h2>
 <div id="displayDiv"></div>
 <div id="main-section">
     <div id="map">
@@ -24,26 +24,32 @@
             <div id="weather_image"></div>
             <div id="locationDiv"></div>
             <div id="estimated"></div>
-            <div id="city_location"></div>
             <div id="weather"></div>
+            <div id="city_location"></div>
             <div id="observation_time"></div>
         </div>
 
         <div id="side_container2">
-            <div id="chuck_image">
-                <img src="images/chuck.gif" id="chuck_norris_gif" alt="chuck">
-            </div>
+            <form class="form-inline text-center">
+                <div class="input-group">
+                    <input type="text" id="address" class="form-control input-md" size="40" placeholder="City or Zipcode">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-md btn-danger" id="address_button">Chuck It</button>
+                    </div>
+                </div>
+            </form>
+            <img src="images/chuck.gif" id="chuck_norris_gif" alt="chuck">
         </div>
     </div>
 
-    <form class="form-inline text-center">
-        <div class="input-group">
-            <input type="text" id="address" class="form-control input-md" size="40" placeholder="City or Zipcode">
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-md btn-danger" id="address_button">Chuck It</button>
-            </div>
-        </div>
-    </form>
+    <!--<form class="form-inline text-center">-->
+        <!--<div class="input-group">-->
+            <!--<input type="text" id="address" class="form-control input-md" size="40" placeholder="City or Zipcode">-->
+            <!--<div class="input-group-btn">-->
+                <!--<button type="button" class="btn btn-md btn-danger" id="address_button">Chuck It</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</form>-->
 </div>
 </body>
 </html>
