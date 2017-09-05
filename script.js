@@ -1,11 +1,9 @@
-var lat1 = 33.6846;
-var lng = -117.8265;
-var data = null;
-
 $(document).ready(function () {
-    // $("#start_over").click(start_over);
+    var lat1 = 33.6846;
+    var lng = -117.8265;
+    var data = null;
+
     initialize();
-    $.ajax(chuckNorris);
 
     var displayWeather ={
         url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+lat1+','+lng+'.json ',
@@ -16,15 +14,10 @@ $(document).ready(function () {
     };
 
     $.ajax(displayWeather);
-    // $('#address').click(zoomToArea);
     $('.btn-danger').click(codeAddress);
-
     $("#address_button").click(function(){
-        $.ajax(chuckNorris);
-        console.log("clicked");
         codeAddress();
     });
-
 });
 
 var geocoder;
@@ -64,9 +57,7 @@ function codeAddress() {
                 dataType: 'json',
                 method: 'get'
             };
-
             $.ajax(displayWeather);
-
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -78,34 +69,10 @@ function errorFromServer(){
 }
 
 function receiveDataFromServer(data){
-    console.log('display weather function was called');
-    console.log(data);
-    console.log(data.current_observation.display_location.full);
-    console.log(data.current_observation.icon_url);
     $('#weather_image').css('background-image','url('+data.current_observation.icon_url+')');
     $('#locationDiv').text(data.current_observation.display_location.full);
     $('#city_location').text(data.current_observation.observation_location.city);
     $('#weather').text(data.current_observation.weather);
     $('#estimated').text(data.current_observation.temperature_string);
     $('#observation_time').text(data.current_observation.observation_time);
-}
-
-var chuckNorris ={
-    url: 'https://api.chucknorris.io/jokes/random',
-    success: receiveChuckData,
-    error: chuckError,
-    dataType: 'json',
-    crossDomain: true,
-    method: 'get'
-};
-
-function chuckError(){
-    console.log('there was an error');
-}
-
-function receiveChuckData(chuck){
-    console.log('function was called');
-    console.log(chuck);
-    console.log(chuck.value);
-    $('#displayDiv').text(chuck.value);
 }
