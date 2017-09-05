@@ -1,81 +1,173 @@
 @font-face {
-    font-family: coolFont;
-    src: url(fonts/coolFont.ttf);
+    font-family: BarleyScript;
+    src: url(fonts/BarleyScript.ttf);
+}
+
+@font-face {
+    font-family: dialogue;
+    src: url(fonts/dialogue.otf);
 }
 
 body{
+    font-family: dialogue;
     font-size: 0;
-    width: 1400px;
-    height: 1000px;
+    width: 100%;
     margin: 0 auto;
+    height: auto;
     background-image: url("images/blurry-city.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.head-title,
-.head-subtitle{
-    font-family: coolFont;
-    font-size: 70px;
+#main-section{
+    padding-left: 140px;
+}
+
+.head-title{
+    font-family: BarleyScript;
+    font-size: 60px;
     color: white;
     text-align: center;
     font-weight: bolder;
-    margin: 20px 0 0;
     text-shadow:
-            6px 6px black,
-            -6px 6px black,
-            6px -6px black,
-            -6px -6px black,
-            6px 6px 9px black;
+            4px 4px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 20px black;
 }
 
-.head-subtitle{
-    font-size: 40px;
-    margin: 10px 0 20px;
-    text-shadow:
-            3px 3px black,
-            -3px 3px black,
-            3px -3px black,
-            -3px -3px black,
-            3px 3px 5px black;
-}
-
-#search_and_maps{
+#map{
     display: inline-block;
-    border: 2px solid white;
-    height: 950px;
-    width: 950px;
+    border: 3px solid white;
+    height: 440px;
+    width: 55%;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin: 20px 0 50px;
+    box-shadow:
+            3px 3px 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            1px 1px 20px black;
+}
+
+#weather-location {
+    color: white;
+    margin: 0;
+    padding: 5px;
+    font-size: 10px;
 }
 
 .side-container{
     display: inline-block;
-    top: 20px;
+    position: absolute;
+    width: 330px;
 }
 
 #side_container1,
-#side_container2 {
-    margin: 20px;
-    border: 2px solid white;
+#side_container2{
+    margin: 20px 20px 0;
     display: block;
-    width: 400px;
-    height: 460px;
+    width: 100%;
+    height: 125px;
     border-radius: 10px;
 }
 
-#refresh-button{
-    margin-top: 20px;
+#side_container1{
+    height: 300px;
+    border: 2px solid white;
+    text-shadow:
+            1px 1px 0 black,
+            0px 0px 0 black,
+            0px 0px 0 black,
+            0px 0px 0 black,
+            1px 1px 2px black;
+    box-shadow:
+            3px 3px 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            1px 1px 20px black;
 }
 
-.refresh{
-    font-family: coolFont;
-    width: 200px;
-    height: 50px;
-    border-radius: 30px;
-    font-size: 30px;
+#side_container2{
+    margin: 8px 20px 0;
+}
+
+#weather-location{
+    font-size: 20px;
     color: white;
-    background-color: black;
-    display: inline;
+    text-align: center;
+    text-decoration: underline;
+    margin: 15px 0;
 }
 
+#weather_image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+    width: 120px;
+    height: 120px;
+    margin: -6px 12px 0 0;
+}
+
+#locationDiv,
+#weather,
+#estimated,
+#city_location{
+    color: white;
+    font-size: 20px;
+    margin: 20px 10px;
+    display: block;
+    width: 305px;
+    height: 26px;
+}
+
+#city_location{
+    width: 305px;
+    height: 49px;
+}
+
+#observation_time{
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+    font-size: 10px;
+    margin: 2px 10px;
+    display: block;
+    width: 305px;
+    height: 25px;
+}
+
+#locationDiv{
+    margin-top: 10px;
+}
+
+.input-group{
+    float: left;
+    margin: 10px 0 50px;
+    box-shadow:
+            3px 3px 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            1px 1px 20px black;
+}
+
+.btn-danger{
+    font-family: BarleyScript;
+    text-shadow:
+            2px 2px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 5px black;
+    box-shadow:
+            3px 3px 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            1px 1px 20px black;
+}
