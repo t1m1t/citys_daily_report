@@ -12,15 +12,11 @@ body{
     font-family: dialogue;
     font-size: 0;
     width: 100%;
-    margin: 0 auto;
     height: auto;
     background-image: url("images/blurry-city.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#main-section{
-    padding-left: 140px;
+    background-color: black;
 }
 
 .head-title{
@@ -37,39 +33,22 @@ body{
             1px 1px 20px black;
 }
 
-#map{
-    display: inline-block;
-    border: 3px solid white;
-    height: 440px;
-    width: 55%;
-    position: relative;
-    border-radius: 15px;
-    margin: 20px 0 50px;
-    box-shadow:
-            3px 3px 0 black,
-            0 0 0 black,
-            0 0 0 black,
-            0 0 0 black,
-            1px 1px 20px black;
+#main-section{
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
 
-#weather-location {
-    color: white;
-    margin: 0;
-    padding: 5px;
-    font-size: 10px;
-}
-
-.side-container{
+#side-container{
     display: inline-block;
-    position: absolute;
+    margin: 0 auto;
+    margin-right: 10px;
     width: 330px;
 }
 
 #side_container1,
 #side_container2{
-    margin: 20px 20px 0;
-    display: block;
+    display: inline-block;
     width: 100%;
     height: 125px;
     border-radius: 10px;
@@ -93,7 +72,28 @@ body{
 }
 
 #side_container2{
-    margin: 8px 20px 0;
+    padding-top: 30px;
+}
+
+#map{
+    display: inline-block;
+    border: 3px solid white;
+    height: 426px;
+    width: 60%;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-left: 10px;
+    box-shadow:
+            3px 3px 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            0 0 0 black,
+            1px 1px 20px black;
+}
+
+#side-container,
+#map {
+    margin-top: 20px;
 }
 
 #weather-location{
@@ -118,6 +118,7 @@ body{
 #estimated,
 #city_location{
     color: white;
+    text-align: left;
     font-size: 20px;
     margin: 20px 10px;
     display: block;
@@ -170,4 +171,21 @@ body{
             0 0 0 black,
             0 0 0 black,
             1px 1px 20px black;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        width: 100%;
+    }
+    .head-title{
+        margin-bottom: 30px;
+    }
+    #map{
+        margin: 0 0 60px;
+        width: 90%;
+        height: 350px;
+    }
+    #side-container{
+        margin-right: 0;
+    }
 }

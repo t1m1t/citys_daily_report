@@ -11,38 +11,39 @@
     <script src="script.js"></script>
 </head>
 <body>
-<div id="display_div">
-    <h2 class="head-title">Today's Daily Report!</h2>
+<h2 class="head-title">Today's Daily Report!</h2>
 
-    <div id="main-section">
-        <div id="map"></div>
-
-        <div class="side-container">
-            <div id="side_container1">
-                <h2 id="weather-location">Weather</h2>
-                <div id="weather_image"></div>
-                <div id="locationDiv"></div>
-                <div id="estimated"></div>
-                <div id="weather"></div>
-                <div id="city_location"></div>
-                <div id="observation_time"></div>
-            </div>
-
-            <div id="side_container2">
-                <form class="form-inline text-center">
-                    <div class="input-group">
-                        <input type="text" id="address" class="form-control input-md" size="40" placeholder="City or Zipcode">
-                        <div class="input-group-btn">
-                            <button type="button" class="btn btn-md btn-danger" id="address_button">Click Me!</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
+<div id="main-section">
+    <div id="side-container">
+        <div id="side_container1">
+            <h2 id="weather-location">Weather</h2>
+            <div id="weather_image"></div>
+            <div id="locationDiv"></div>
+            <div id="estimated"></div>
+            <div id="weather"></div>
+            <div id="city_location"></div>
+            <div id="observation_time"></div>
         </div>
 
+        <div id="side_container2">
+            <form class="form-inline text-center">
+                <div class="input-group">
+                    <input type="text" id="address" class="form-control input-md" size="40" placeholder="City or Zipcode">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-md btn-danger" id="address_button">Click Me!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <div id="map"></div>
+
 </div>
+
+<div id="youtube_portion">
+
+</div>
+
 </body>
 </html>
