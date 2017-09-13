@@ -50,7 +50,7 @@ function codeAddress() {
             lat1 = results[0].geometry.location.lat();
             lng = results[0].geometry.location.lng();
 
-            var displayWeather ={
+            var displayWeather = {
                 url: 'http://api.wunderground.com/api/1348f5771c1ee038/conditions/forecast/q/'+lat1+','+lng+'.json ',
                 success: receiveDataFromServer,
                 error: errorFromServer,
@@ -69,7 +69,7 @@ function errorFromServer(){
 }
 
 function receiveDataFromServer(data){
-    $('#weather_image').css('background-image','url('+data.current_observation.icon_url+')');
+    $('#weather_image').css('background-image','url(' + data.current_observation.icon_url + ')');
     $('#locationDiv').text(data.current_observation.display_location.full);
     $('#city_location').text(data.current_observation.observation_location.city);
     $('#weather').text(data.current_observation.weather);
