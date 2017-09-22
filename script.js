@@ -15,8 +15,11 @@ $(document).ready(function () {
 
     $.ajax(displayWeather);
     $('.btn-danger').click(codeAddress);
-    $("#address_button").click(function(){
-        codeAddress();
+
+    $('#address').keypress(function(e){
+        if(e.keyCode === 13){
+            codeAddress();
+        }
     });
 });
 
