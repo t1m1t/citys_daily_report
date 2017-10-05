@@ -32,7 +32,7 @@ function initialize() {
     geocoder = new google.maps.Geocoder();
     var latlng = new google.maps.LatLng(33.6846,-117.8265);
     var mapOptions = {
-        zoom: 8,
+        zoom: 11,
         center: latlng,
         mapTypeId: 'terrain'
     };
